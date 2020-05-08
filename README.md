@@ -1,2 +1,2 @@
 # ITOPS-ontology
-Ontology source files for the IT Operations Ontology derived from Wikidata, DBPedia and Wikipedia
+Authors: Rosario Uceda-Sosa, Nandana Mihindukulasooriya, Sahil Bansal, Seema Nagar, Atul Kumar, Vikas Agarwal, Gaetano Rossiello, Alfio Gliozzo IT Operations ontologies files in TTL. Coming on 5/20/20
