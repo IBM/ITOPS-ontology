@@ -5,7 +5,7 @@ Special thanks to Salim Roukos, Ruchi Mahindru and Yu Deng for their help and ad
 
 The IT Operations ontology is built from a domain agnostic pipeline that leverages information from Wikidata, Wikipedia and DBPedia. There are three stages in the current pipeline, each extending the previous ones by using a variety of symbolic and ML/DL techniques. 
 
-The outcome of each stage is a turtle (.ttl) file, ITOPS_S1.ttl, ITOPS_S2.ttl and ITOPS_S3.ttl which can be deployed separately and installed in a triplestore. 
+The outcome of each stage is a turtle (.ttl) file, ITOPS_S1.ttl, ITOPS_S2.ttl and ITOPS_S3.ttl which can be deployed separately and installed in a triplestore. These files are published under Apache 2.0 license. 
 
 Pls check in the ITOPS_README.pdf file for details and sample queries. 
 
