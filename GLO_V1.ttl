@@ -1,0 +1,2006 @@
+# baseURI: http://www.ibm.com/GLO
+
+@prefix : <http://www.ibm.com/GLO#> .
+@prefix Unis: <http://www.ibm.com/UniS#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.ibm.com/GLO>
+  a owl:Ontology ;
+.
+:AMRRef
+  a owl:AnnotationProperty ;
+  rdfs:comment "An identifier of the AMR frame where the entity comes from" ;
+  rdfs:label "AMR ref" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :identifier ;
+  rdfs:subPropertyOf :provenance ;
+.
+:ActionPlan
+  a owl:Class ;
+  rdfs:comment "A set of actions to accomplish a goal or address a finding. " ;
+  rdfs:label "action plan" ;
+  rdfs:subClassOf :ProcessTemplate ;
+.
+:Activity
+  a :OccurrenceEntity ;
+  :WDID "Q1914636" ;
+  :alias "event" ;
+  :alias "sustained action" ;
+  :subConceptOf :Occurrence ;
+  rdfs:comment "event; actions that result in changes of state" ;
+  rdfs:label "activity" ;
+.
+:AnnotatedLink
+  a owl:Class ;
+  :alias "annotated edge" ;
+  :alias "reified edge" ;
+  :alias "reified link" ;
+  rdfs:comment "A reified link that can be used to annotate a link" ;
+  rdfs:label "annotated link" ;
+  rdfs:subClassOf :Statement ;
+.
+:Argument
+  a owl:Class ;
+  :alias "parameter" ;
+  :alias "role" ;
+  :alias "slot" ;
+  rdfs:comment "A parameter describes how an entity functions in a statement, an event or a schema. Argument, role and slots are equivalent classes in Chronos. " ;
+  rdfs:label "argument" ;
+  rdfs:subClassOf :Variable ;
+  owl:equivalentClass :Parameter ;
+.
+:ArtificialGeographicEntity
+  a :DomainEntity ;
+  :WDID "Q27096235" ;
+  :subConceptOf :GeographicEntity ;
+  rdfs:comment "elements of the ground or the underground that have been greatly modified by human being (roads, houses, ...)" ;
+  rdfs:label "artificial geographic entity" ;
+.
+:Artificial_physical_object
+  a :OccurrenceEntity ;
+  :WDID "Q8205328" ;
+  :alias "artefact" ;
+  :alias "artifact" ;
+  :alias "human-made physical object" ;
+  :alias "man-made physical object" ;
+  :alias "non-natural physical object" ;
+  :alias "physical artefact" ;
+  :subConceptOf :PhysicalObject ;
+  rdfs:comment "physical object made or shaped by human hand" ;
+  rdfs:label "artificial physical object" ;
+.
+:Asset
+  a :OccurrenceEntity ;
+  :WDID "Q46737" ;
+  :alias "assets" ;
+  :subConceptOf :EconomicConcept ;
+  rdfs:comment "economic resource, from which future economic benefits are expected" ;
+  rdfs:label "asset" ;
+.
+:Base
+  a owl:Class ;
+  rdfs:comment "The top level class of all classes for the universal schema. Statement connectors and logical operators are here to allow for full statements. " ;
+  rdfs:label "GLO BASE" ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Behavior
+  a :OccurrenceEntity ;
+  :WDID "Q9332" ;
+  :alias "behavioral response to stimulus" ;
+  :alias "behaviour" ;
+  :alias "behavioural response to stimulus" ;
+  :subConceptOf :Activity ;
+  rdfs:comment "way that one acts in different situations" ;
+  rdfs:label "behavior" ;
+.
+:Brand
+  a :DomainEntity ;
+  :WDID "Q431289" ;
+  :alias "Product Brand" ;
+  :alias "brandmark" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "identification for a good or service" ;
+  rdfs:label "brand" ;
+.
+:Building
+  a :DomainEntity ;
+  :WDID "Q41176" ;
+  :alias "buildings" ;
+  :alias "edifice" ;
+  :subConceptOf :GeographicEntity ;
+  rdfs:comment "structure, typically with a roof and walls, standing more or less permanently in one place" ;
+  rdfs:label "building" ;
+.
+:CertaintyContext
+  a owl:Class ;
+  :alias "probabilistic context" ;
+  rdfs:comment "A context for certainty or probabilitic values. " ;
+  rdfs:label "certainty context" ;
+  rdfs:subClassOf :Context ;
+.
+:City
+  a :DomainEntity ;
+  :WDID "Q515" ;
+  :subConceptOf :GeoPoliticalEntity ;
+  rdfs:comment "large and permanent human settlement" ;
+  rdfs:label "city" ;
+.
+:CommunicationMedium
+  a :DomainEntity ;
+  :WDID "Q340169" ;
+  :alias "communication media" ;
+  :alias "communication" ;
+  :alias "info media" ;
+  :alias "information media" ;
+  :alias "information medium" ;
+  :alias "media (communication)" ;
+  :alias "medium" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "storage and delivering agent of information or data" ;
+  rdfs:label "communication medium" ;
+.
+:Company
+  a :DomainEntity ;
+  :WDID "Q783794" ;
+  :subConceptOf :Organization ;
+  rdfs:comment "association or collection of individuals, whether natural persons, juridic persons, or a mixture of both" ;
+  rdfs:label "company" ;
+.
+:Component
+  a :OccurrenceEntity ;
+  :WDID "Q1310239" ;
+  :alias "component of a component entity" ;
+  :alias "component of a divisible whole" ;
+  :alias "constituent part" ;
+  :alias "constituent" ;
+  :alias "element" ;
+  :alias "module" ;
+  :alias "part" ;
+  :subConceptOf :PhysicalObject ;
+  rdfs:comment "smaller, self-contained part of a component entity (entity consisting of components)" ;
+  rdfs:label "component" ;
+.
+:Condition
+  a owl:Class ;
+  :WDID "Q813912" ;
+  :alias "circumstances" ;
+  :alias "reality of the situation" ;
+  :alias "state" ;
+  :alias "status" ;
+  rdfs:comment "state or circumstances of some object or event" ;
+  rdfs:label "condition" ;
+  rdfs:subClassOf :Statement ;
+.
+:Context
+  a owl:Class ;
+  rdfs:comment "A context that qualifies a single tuple or an entity or even a subgraph" ;
+  rdfs:label "context" ;
+  rdfs:subClassOf :Statement ;
+.
+:Country
+  a :DomainEntity ;
+  :WDID "Q6256" ;
+  :alias "countries" ;
+  :subConceptOf :GeoPoliticalEntity ;
+  rdfs:comment "distinct region in geography; a broad term that can include political divisions or regions associated with distinct political characteristics" ;
+  rdfs:label "country" ;
+.
+:DBID
+  a owl:AnnotationProperty ;
+  rdfs:comment "DBPedia ID" ;
+  rdfs:label "DBPedia ID" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :identifier ;
+  rdfs:subPropertyOf :provenance ;
+.
+:Device
+  a :DomainEntity ;
+  :WDID "Q1183543" ;
+  :alias "apparatus" ;
+  :alias "creation of technology" ;
+  :alias "gadget" ;
+  :alias "implement" ;
+  :alias "instrument" ;
+  :alias "mechanical device" ;
+  :alias "technical device" ;
+  :alias "technological item" ;
+  :subConceptOf :Equipment ;
+  rdfs:comment "complex equipment, such as with a motor or powered by electricity or another source of energy that it converts" ;
+  rdfs:label "device" ;
+.
+:District
+  a :DomainEntity ;
+  :WDID "Q149621" ;
+  :subConceptOf :GeoPoliticalEntity ;
+  rdfs:comment "type of administrative division, in some countries" ;
+  rdfs:label "District" ;
+.
+:Document
+  a :DomainEntity ;
+  :WDID "Q49848" ;
+  :alias "doc" ;
+  :subConceptOf :WorkProduct ;
+  rdfs:comment "Preserved information" ;
+  rdfs:label "document" ;
+.
+:DocumentConcept
+  a owl:Class ;
+  rdfs:comment "Classes and entities associated to documents. A document can be considered as a set of statements. " ;
+  rdfs:label "document concept" ;
+  rdfs:subClassOf :Base ;
+.
+:DocumentReference
+  a owl:Class ;
+  :alias "doc link" ;
+  rdfs:comment "A document link  can be regarded as an aggregate of statements. Each document has a title. " ;
+  rdfs:label "document reference" ;
+  rdfs:subClassOf :DocumentConcept ;
+.
+:DocumentSection
+  a owl:Class ;
+  rdfs:comment "A section of a document. Each document section may have a title. " ;
+  rdfs:label "document section" ;
+  rdfs:subClassOf :DocumentConcept ;
+.
+:DomainEntity
+  a owl:Class ;
+  :alias "Entity" ;
+  rdfs:comment "The domain entities. Similar to WIkidata:Item. An entity can be an instance or a concept (a set of instances). If not declared explicitly, entities are concepts, meaning that they can have subconcepts and instances. Entities may have qualifiers." ;
+  rdfs:label "domain entity" ;
+  rdfs:subClassOf :Base ;
+.
+:EconomicConcept
+  a :OccurrenceEntity ;
+  :WDID "Q29028649" ;
+  :alias "economics concept" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "concept used in economic sciences" ;
+  rdfs:label "economic concept" ;
+.
+:EntitySchema
+  a owl:Class ;
+  :alias "artifact frame schema" ;
+  :alias "artifact frame type" ;
+  rdfs:comment "Describes the components of an artifact" ;
+  rdfs:label "entity schema" ;
+  rdfs:subClassOf :Schema ;
+.
+:Equipment
+  a :DomainEntity ;
+  :WDID "Q16798631" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "collective term for all items that are required to exercise a certain activity" ;
+  rdfs:label "equipment" ;
+.
+:Error
+  a :DomainEntity ;
+  :WDID "Q29485" ;
+  :WDLink "https://www.wikidata.org/wiki/Q29485" ;
+  :alias "erroneous" ;
+  :alias "incorrect" ;
+  :alias "mistake" ;
+  :alias "mistaken" ;
+  :alias "wrong" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "deviation from what is correct" ;
+  rdfs:label "error" ;
+.
+:Event
+  a :OccurrenceEntity ;
+  :WDID "Q1190554" ;
+  :WDLink "https://www.wikidata.org/wiki/Q1190554" ;
+  :alias "happening" ;
+  :alias "occurrant" ;
+  :alias "occurrence" ;
+  :subConceptOf :Occurrence ;
+  rdfs:comment "occurrence of a fact or object in space-time; instantiation of a property in an object; what can be experimented or registered by some observer." ;
+  rdfs:label "event" ;
+.
+:EventSchema
+  a owl:Class ;
+  :alias "event frame schema" ;
+  :alias "event frame type" ;
+  rdfs:comment "Describes the components of an event" ;
+  rdfs:label "event schema" ;
+  rdfs:subClassOf :Schema ;
+.
+:Facility
+  a :DomainEntity ;
+  :WDID "Q13226383" ;
+  :alias "site" ;
+  :alias "venue" ;
+  :subConceptOf :GeographicEntity ;
+  rdfs:comment "place for doing something" ;
+  rdfs:label "facility" ;
+.
+:Failure
+  a :DomainEntity ;
+  :WDID "Q1121708" ;
+  :WDLink "https://www.wikidata.org/wiki/Q1121708" ;
+  :alias "catastrophe" ;
+  :alias "failed" ;
+  :alias "failing" ;
+  :alias "flop" ;
+  :alias "loss" ;
+  :subConceptOf :Result ;
+  rdfs:comment "state or event of not meeting a desirable or intended objective, relative to a particular observer or belief system" ;
+  rdfs:label "failure" ;
+.
+:Family
+  a :DomainEntity ;
+  :WDID "Q8436" ;
+  :alias "families" ;
+  :subConceptOf :GroupOfHumans ;
+  rdfs:comment "group of people affiliated by consanguinity, affinity, or co-residence" ;
+  rdfs:label "family" ;
+.
+:ForumEntry
+  a owl:Class ;
+  rdfs:comment "A forum entry is an individual entry of a forum thread. " ;
+  rdfs:label "forum entry" ;
+  rdfs:subClassOf :DocumentReference ;
+.
+:ForumThread
+  a owl:Class ;
+  rdfs:comment "A forum entry contains a list of questions, both questions and responses. " ;
+  rdfs:label "forum thread" ;
+  rdfs:subClassOf :DocumentReference ;
+.
+:GeoPoliticalEntity
+  a :DomainEntity ;
+  :WDID "Q1048835" ;
+  :WDID "Q15617994" ;
+  :WDID "Q56061" ;
+  :subConceptOf :GeographicArea ;
+  rdfs:comment "Politically-defined populated territories (such as countries, provinces, states, cities, districts, etc.). Must include a political organization, a population, and physical territory." ;
+  rdfs:label "geopolitical entity" ;
+.
+:GeographicArea
+  a :DomainEntity ;
+  :WDID "Q3622002" ;
+  :subConceptOf :GeographicRegion ;
+  rdfs:label "geographic area" ;
+.
+:GeographicEntity
+  a :DomainEntity ;
+  :WDID "Q27096213" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "place or entity that could be a place" ;
+  rdfs:label "geographic entity" ;
+.
+:GeographicLocation
+  a :DomainEntity ;
+  :WDID "Q2221906" ;
+  :alias "coordinates" ;
+  :alias "geographic point" ;
+  :alias "location" ;
+  :alias "place" ;
+  :subConceptOf :GeographicEntity ;
+  rdfs:comment "point or an area on the Earth's surface or elsewhere" ;
+  rdfs:label "geographic location" ;
+.
+:GeographicRegion
+  a :DomainEntity ;
+  :WDID "Q82794" ;
+  :alias "geographical region" ;
+  :alias "place" ;
+  :alias "region" ;
+  :subConceptOf :GeographicLocation ;
+  rdfs:comment "2D or 3D defined space, mainly in terrestrial and astrophysics sciences" ;
+  rdfs:label "geographic region" ;
+.
+:Goods
+  a :DomainEntity ;
+  :WDID "Q28877" ;
+  :alias "economic good" ;
+  :alias "economic goods" ;
+  :alias "good" ;
+  :subConceptOf :EconomicConcept ;
+  :subConceptOf :PhysicalObject ;
+  rdfs:comment "tangible and intangible thing, except labor tied services, that satisfies human wants and provides utility" ;
+  rdfs:label "goods" ;
+.
+:GovernmentAgency
+  a :DomainEntity ;
+  :WDID "Q327333" ;
+  :alias "agency" ;
+  :alias "government body" ;
+  :alias "government department" ;
+  :alias "government office" ;
+  :alias "public agency" ;
+  :alias "public body" ;
+  :alias "state agency" ;
+  :subConceptOf :GovernmentOrganization ;
+  rdfs:comment "organization in the machinery of government responsible for specific functions" ;
+  rdfs:label "government agency" ;
+.
+:GovernmentOrganization
+  a :DomainEntity ;
+  :WDID "Q2659904" ;
+  :alias "state organization" ;
+  :subConceptOf :Organization ;
+  rdfs:comment "organization administrated by a government authority or agency" ;
+  rdfs:label "government organization" ;
+.
+:Group
+  a :DomainEntity ;
+  :WDID "Q16887380" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "summarizes entities with similar characteristics together" ;
+  rdfs:label "Group" ;
+.
+:GroupOfHumans
+  a :DomainEntity ;
+  :WDID "Q16334295" ;
+  :subConceptOf :LivingThingGroup ;
+  rdfs:comment "any set of human beings" ;
+  rdfs:label "group of humans" ;
+.
+:IRI
+  a owl:AnnotationProperty ;
+  :alias "reference IRI" ;
+  :alias "reference link" ;
+  rdfs:comment "The iri of a resource" ;
+  rdfs:label "iri" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :identifier ;
+.
+:Ideology
+  a :DomainEntity ;
+  :WDID "Q7257" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "set of ideas that form one's aims, expectations and actions" ;
+  rdfs:label "ideology" ;
+.
+:Incident
+  a :OccurrenceEntity ;
+  :WDID "Q18669875" ;
+  :alias "incidents" ;
+  :alias "occurrence" ;
+  :subConceptOf :Occurrence ;
+  rdfs:comment "event that may cause an interruption or a crisis" ;
+  rdfs:label "activity" ;
+.
+:Individual
+  a :DomainEntity ;
+  :WDID "Q795052" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "person or a specific object" ;
+  rdfs:label "individual" ;
+.
+:IndividualAnimal
+  a :DomainEntity ;
+  :WDID "wd:Q26401003" ;
+  :subConceptOf :Individual ;
+  rdfs:comment "individual animal" ;
+  rdfs:label "individual animal" ;
+.
+:Information
+  a :DomainEntity ;
+  :WDID "Q11028" ;
+  :WDLink "https://www.wikidata.org/wiki/Q11028" ;
+  :alias "Information artifact" ;
+  :alias "Information element" ;
+  :alias "info" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "that which informs; the answer to a question of some kind; that from which data and knowledge can be derived" ;
+  rdfs:label "information" ;
+.
+:Interface
+  a :DomainEntity ;
+  :WDID "Q23808" ;
+  :alias "computer interface" ;
+  :alias "software interface" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "Concept of computer science; point of interaction between two things" ;
+  rdfs:label "interface" ;
+.
+:IssueDescription
+  a owl:Class ;
+  rdfs:comment "The section of a document that describes an issue. It may contain links to external documentation. " ;
+  rdfs:label "issue description" ;
+  rdfs:subClassOf :DocumentSection ;
+.
+:Language
+  a :DomainEntity ;
+  :WDID "Q34770" ;
+  :alias "human language" ;
+  :alias "idiom" ;
+  :alias "lang" ;
+  :alias "particular language" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "particular system of communication, usually named for the region or peoples that use it" ;
+  rdfs:label "language" ;
+.
+:LanguageElement
+  a :DomainEntity ;
+  :alias "Language construct" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "An element, construct or statement of a language" ;
+  rdfs:label "language element" ;
+.
+:LegalPerson
+  a :DomainEntity ;
+  :WDID "Q3778211" ;
+  :alias "artificial person" ;
+  :alias "law figure" ;
+  :alias "law personality" ;
+  :alias "law subject" ;
+  :alias "legal body" ;
+  :alias "legal entity" ;
+  :alias "legal personality" ;
+  :alias "legal subject" ;
+  :alias "persona iuris" ;
+  :alias "subject of law" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "any human or non-human entity that is recognized as having privileges and obligations; a legal fiction which is used to abstract away the differences between natural persons, juridical persons and other entities such as countries" ;
+  rdfs:label "legal person" ;
+.
+:LinguisticFrame
+  a owl:Class ;
+  :alias "Linguistic Frame" ;
+  :alias "linguistic frame schema" ;
+  :alias "linguistic frame type" ;
+  rdfs:comment "A schema represents a PropBank (AMR) frame. " ;
+  rdfs:label "linguistic frame" ;
+  rdfs:subClassOf :Statement ;
+.
+:LivingThingGroup
+  a :DomainEntity ;
+  :WDID "Q16334298" ;
+  :subConceptOf :Group ;
+  rdfs:comment "set of live physical entities of any nature" ;
+  rdfs:label "living thing group" ;
+.
+:MassMedia
+  a :DomainEntity ;
+  :WDID "Q11033" ;
+  :alias "communication mass media" ;
+  :subConceptOf :CommunicationMedium ;
+  rdfs:comment "media technologies that are intended to reach a large audience by mass communication" ;
+  rdfs:label "mass media" ;
+.
+:Measure
+  a :DomainEntity ;
+  :WDID "Q39875001" ;
+  :WDLink "https://www.wikidata.org/wiki/Q39875001" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "standard against which something can be judged; a criterion" ;
+  rdfs:label "measure" ;
+.
+:Member
+  a :DomainEntity ;
+  :WDID "Q9200127" ;
+  :alias "membership" ;
+  :subConceptOf :LegalPerson ;
+  rdfs:comment "individual or organization with membership in a group; constitutive components of a corporate body" ;
+  rdfs:label "member" ;
+.
+:Model_series
+  a :DomainEntity ;
+  :WDID "Q811701" ;
+  :alias "construction line" ;
+  :alias "construction series" ;
+  :alias "model line" ;
+  :subConceptOf :Series ;
+  rdfs:comment "group of related products, sold simultaneously or consecutively" ;
+  rdfs:label "model series" ;
+.
+:Money
+  a :OccurrenceEntity ;
+  :WDID "Q1368" ;
+  :alias "cash" ;
+  :subConceptOf :EconomicConcept ;
+  rdfs:comment "object or record accepted as payment " ;
+  rdfs:label "money" ;
+.
+:Neighborhood
+  a :DomainEntity ;
+  :WDID "Q123705" ;
+  :partOf :City ;
+  :subConceptOf :GeoPoliticalEntity ;
+  rdfs:comment "geographically localized community within a larger city, town, suburb" ;
+  rdfs:label "neighborhood" ;
+.
+:Occurrence
+  a :OccurrenceEntity ;
+  :WDID "Q1190554" ;
+  :alias "event" ;
+  :alias "events" ;
+  :alias "happening" ;
+  :alias "incident" ;
+  :alias "occurrant" ;
+  :alias "perdurant" ;
+  :subConceptOf :TemporalEntity ;
+  rdfs:comment "occurrence of a fact or object in space-time; instantiation of a property in an object; what can be experimented or registered by some observer. " ;
+  rdfs:label "occurrence" ;
+.
+:OccurrenceEntity
+  a owl:Class ;
+  rdfs:comment "Instances are occurrences, events, processes, activities, etc. " ;
+  rdfs:label "occurrence entity" ;
+  rdfs:subClassOf :DomainEntity ;
+.
+:Organization
+  a :DomainEntity ;
+  :WDID "Q43229" ;
+  :WDLink "https://www.wikidata.org/wiki/Q43229" ;
+  :alias "org" ;
+  :alias "organisation" ;
+  :alias "organisations" ;
+  :alias "organizations" ;
+  :subConceptOf :GroupOfHumans ;
+  rdfs:comment "social entity with a collective goal; social units of people that are structured and managed to meet a need, or to pursue collective goals" ;
+  rdfs:label "organization"@en ;
+.
+:PDOnt
+  a owl:AnnotationProperty ;
+  rdfs:comment "IBM Process Diagnosis Ontology. Marker of provenance. " ;
+  rdfs:label "PD ont" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :provenance ;
+.
+:Parameter
+  a owl:Class ;
+  :alias "argument" ;
+  :alias "role" ;
+  :alias "slot" ;
+  rdfs:comment "A parameter describes how an entity functions in a statement, an event or a schema. Argument, role and slots are equivalent classes in Chronos. " ;
+  rdfs:label "parameter" ;
+  rdfs:subClassOf :Variable ;
+  owl:equivalentClass :StatementRole ;
+.
+:Person
+  a :DomainEntity ;
+  :WDID "Q215627" ;
+  :subConceptOf :Individual ;
+  rdfs:comment "being that has certain capacities or attributes constituting personhood" ;
+  rdfs:label "person" ;
+.
+:PhysicalObject
+  a :DomainEntity ;
+  :WDID "Q223557" ;
+  :alias "body (physics)" ;
+  :alias "body" ;
+  :alias "cohesive object" ;
+  :alias "concrete physical object" ;
+  :alias "object (physics)" ;
+  :alias "physical body" ;
+  :alias "tangible physical object" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "singular aggregation of substance(s) such as matter or radiation, with overall properties such as mass, position or momentum" ;
+  rdfs:label "physical object" ;
+.
+:Process
+  a :OccurrenceEntity ;
+  :WDID "Q3249551" ;
+  :subConceptOf :Occurrence ;
+  rdfs:comment "series of events which occur over an extended period of time" ;
+  rdfs:label "process" ;
+.
+:ProcessStep
+  a owl:Class ;
+  rdfs:comment "A step in a process. Describes an action, a set of preconditions and postconditions. It is associated to one or more statements. " ;
+  rdfs:label "process step" ;
+  rdfs:subClassOf :StatementConcept ;
+.
+:ProcessTemplate
+  a owl:Class ;
+  :WDID "Q1914636" ;
+  :alias "event" ;
+  :alias "sustained action" ;
+  rdfs:comment "A flow of steps to accomplish a goal.  " ;
+  rdfs:label "process template" ;
+  rdfs:subClassOf :StatementConcept ;
+.
+:Product
+  a :DomainEntity ;
+  :WDID "Q2424752" ;
+  :alias "commodity" ;
+  :alias "goods" ;
+  :alias "merchandise" ;
+  :alias "products" ;
+  :subConceptOf :Goods ;
+  rdfs:comment "tangible and intangible thing, except labor tied services, that satisfies human wants and provides utility" ;
+  rdfs:label "product" ;
+.
+:Project
+  a :DomainEntity ;
+  :WDID "Q170584" ;
+  :subConceptOf :WorkProduct ;
+  rdfs:comment "collaborative enterprise, frequently involving research or design, that is carefully planned to achieve a particular aim" ;
+  rdfs:label "project" ;
+.
+:ProvenanceTimeStamp
+  a owl:AnnotationProperty ;
+  rdfs:comment "When the data was incorporated to the model" ;
+  rdfs:label "provenance timestamp" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :IRI ;
+  rdfs:subPropertyOf :provenance ;
+.
+:Publication
+  a :DomainEntity ;
+  :WDID "Q732577" ;
+  :subConceptOf :WorkProduct ;
+  rdfs:comment "output of the act of publishing, and also refers to any printed copies" ;
+  rdfs:label "publication" ;
+.
+:QuestionEntry
+  a owl:Class ;
+  rdfs:comment "A question entry of a forum " ;
+  rdfs:label "question entry" ;
+  rdfs:subClassOf :ForumEntry ;
+.
+:RelationSchema
+  a owl:Class ;
+  :alias "relation frame type" ;
+  :alias "relation schema" ;
+  rdfs:comment "Describes the components of a relation when considered a schema" ;
+  rdfs:label "relation schema" ;
+  rdfs:subClassOf :Schema ;
+.
+:ResponseEntry
+  a owl:Class ;
+  rdfs:comment "A response entry of a forum " ;
+  rdfs:label "response entry" ;
+  rdfs:subClassOf :ForumEntry ;
+.
+:Result
+  a :DomainEntity ;
+  :WDID "Q2995644" ;
+  :WDLink "https://www.wikidata.org/wiki/Q2995644" ;
+  :alias "effect" ;
+  :alias "outcome" ;
+  :alias "process result" ;
+  :alias "result of the process" ;
+  :alias "upshot" ;
+  :subConceptOf :Measure ;
+  :subConceptOf :TemporalEntity ;
+  rdfs:comment "final consequence of a sequence of actions or events" ;
+  rdfs:label "result" ;
+.
+:Role
+  a :DomainEntity ;
+  :WDID "Q214339" ;
+  :alias "social role" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "set of behaviours, rights, obligations, beliefs, and norms expected from an individual that has a certain social status" ;
+  rdfs:label "role" ;
+.
+:Rule
+  a :DomainEntity ;
+  :WDID "Q1151067" ;
+  :WDLink "https://www.wikidata.org/wiki/Q1151067" ;
+  :alias "guideline" ;
+  :alias "human-made rule" ;
+  :alias "instruction" ;
+  :alias "law" ;
+  :alias "prescription" ;
+  :alias "regulation" ;
+  :alias "requirement" ;
+  :alias "rules" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "prescription, including laws, regulations, instructions, guidelines, and social conventions; determinate method for performing any operation" ;
+  rdfs:label "rule" ;
+.
+:ScheduledEvent
+  a :OccurrenceEntity ;
+  :WDID "Q1656682" ;
+  :subConceptOf :Event ;
+  rdfs:comment "temporary and scheduled event, like a festival or competition" ;
+  rdfs:label "scheduled event" ;
+.
+:Schema
+  a owl:Class ;
+  :alias "Frame" ;
+  :alias "frame schema" ;
+  :alias "frame type" ;
+  rdfs:comment "A schema represents a type of complex event that may contain steps or sub-events. It is a type for frames. " ;
+  rdfs:label "schema" ;
+  rdfs:subClassOf :Statement ;
+.
+:SchemaStep
+  a owl:Class ;
+  rdfs:comment "A schema step can be either a sub-schema OR an atomic event. Each Schema step has as parameter a simpler schema. " ;
+  rdfs:label "schema step" ;
+  rdfs:subClassOf :Statement ;
+.
+:SequenceStatement
+  a owl:Class ;
+  :alias "order node" ;
+  :alias "order statement" ;
+  :alias "sequence node" ;
+  rdfs:comment "A node that represents the order in a list. E.g., the steps of a schema" ;
+  rdfs:label "sequence statement" ;
+  rdfs:subClassOf :Statement ;
+.
+:Series
+  a :DomainEntity ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "ordered set of similar objects" ;
+  rdfs:label "series" ;
+.
+:Service
+  a :DomainEntity ;
+  :WDID "Q7406919" ;
+  :subConceptOf :EconomicConcept ;
+  rdfs:comment "intangible offering inseparable from its creator's labor, which brings utility value to their client" ;
+  rdfs:label "service" ;
+.
+:Slot
+  a owl:Class ;
+  :alias "argument" ;
+  :alias "role" ;
+  rdfs:comment "An argument describes how an entity functions in a statement, an event or a schema. Argument, role and slots are equivalent classes in Chronos. " ;
+  rdfs:label "slot" ;
+  rdfs:subClassOf :Variable ;
+  owl:equivalentClass :Argument ;
+.
+:SlotType
+  a owl:Class ;
+  rdfs:comment "The parameter (variable or slot) of a statement or schema can have a role in that statement. E.g., agent, recipient, means, etc. An argument role can be thought of as metadata. " ;
+  rdfs:label "slot type" ;
+  rdfs:subClassOf :StatementConcept ;
+.
+:SolutionDescription
+  a owl:Class ;
+  rdfs:comment "The section of a document that describes a resolution of an issue. It may contain links to external documentation. " ;
+  rdfs:label "solution description" ;
+  rdfs:subClassOf :DocumentSection ;
+.
+:SpatialContext
+  a owl:Class ;
+  rdfs:comment "A location context. I.e., a set of statements that define location of one or more events. " ;
+  rdfs:label "spatial context" ;
+  rdfs:subClassOf :Context ;
+.
+:Stakeholder
+  a :DomainEntity ;
+  :WDID "Q2658317" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "Individual, group, or organization, who may affect, be affected by, or perceive itself to be affected by a decision, activity, or outcome of a project" ;
+  rdfs:label "stakeholder" ;
+.
+:Standard
+  a :DomainEntity ;
+  :WDID "Q1271511" ;
+  :WDLink "https://www.wikidata.org/wiki/Q1271511" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "embodiment of a unit of measurement" ;
+  rdfs:label "Standard" ;
+.
+:State
+  a :OccurrenceEntity ;
+  :WDID "Q3505845" ;
+  :alias "current state" ;
+  :subConceptOf :Occurrence ;
+  rdfs:comment "abstract term that denotes the presence of stable values of a set of variables of an object" ;
+  rdfs:label "state" ;
+.
+:Statement
+  a owl:Class ;
+  rdfs:comment "A statement is a set of tuples that qualify or describe domain entities or other statements. There are many types of statements, ranging from logical statements to contexts, conditions or schemas " ;
+  rdfs:label "Statement" ;
+  rdfs:subClassOf :StatementConcept ;
+.
+:StatementConcept
+  a owl:Class ;
+  rdfs:comment "Items associated to a statement. Statements are the building blocks of both documents and processes. " ;
+  rdfs:label "statement concept" ;
+  rdfs:subClassOf :Base ;
+.
+:StatementRole
+  a owl:Class ;
+  :alias "argument" ;
+  :alias "statement slot" ;
+  rdfs:comment "An argument describes how an entity functions in a statement, an event or a schema. Argument, role and slots are equivalent classes in Chronos. " ;
+  rdfs:label "role" ;
+  rdfs:subClassOf :Variable ;
+  owl:equivalentClass :Slot ;
+.
+:StepCondition
+  a owl:Class ;
+  rdfs:comment "Preconditions, postconditions, or any other condition that applies to a process step. That information is located in the relation between a ProcessStep and a StepCondition. A StepCondition is a statement. " ;
+  rdfs:label "step condition" ;
+  rdfs:subClassOf :Condition ;
+.
+:StepOfStatement
+  a owl:ObjectProperty ;
+  rdfs:comment "A process step may be associated to one or more statements. " ;
+  rdfs:domain :ProcessStep ;
+  rdfs:label "step of statement" ;
+  rdfs:range :Statement ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+.
+:Structure
+  a :DomainEntity ;
+  :WDID "Q6671777" ;
+  :WDLink "https://www.wikidata.org/wiki/Q6671777" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "arrangement and organization of interrelated elements in an object or system, or the object or system so organized" ;
+  rdfs:label "structure" ;
+.
+:System
+  a :DomainEntity ;
+  :WDID "Q58778" ;
+  :alias "system" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "set of interacting or interdependent components" ;
+  rdfs:label "system" ;
+.
+:TechnicalStandard
+  a :DomainEntity ;
+  :WDID "Q317623" ;
+  :WDLink "https://www.wikidata.org/wiki/Q317623" ;
+  :subConceptOf :Standard ;
+  rdfs:comment "Standards for industry, information standards, etc.  " ;
+  rdfs:label "technical standard" ;
+.
+:TechnicalSystem
+  a :DomainEntity ;
+  :WDID "Q994895" ;
+  :alias "system" ;
+  :subConceptOf :System ;
+  rdfs:comment "A technical system" ;
+  rdfs:label "technical system" ;
+.
+:TemporalEntity
+  a :DomainEntity ;
+  :WDID "Q26907166" ;
+  :alias "temporal object" ;
+  :alias "temporal thing" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "thing that can be contained within a period of time, or change in state (e.g. events, periods, acts)" ;
+  rdfs:label "temporal entity" ;
+.
+:Text
+  a owl:Class ;
+  :alias "text fragment" ;
+  rdfs:comment "A text fragment or a text pointer. " ;
+  rdfs:label "text" ;
+  rdfs:subClassOf :DocumentConcept ;
+.
+:TimeContext
+  a owl:Class ;
+  rdfs:comment "A temporal context. I.e., a set or list of statements that define temporally one or more events. " ;
+  rdfs:label "time context" ;
+  rdfs:subClassOf :Context ;
+.
+:TimePoint
+  a owl:Class ;
+  rdfs:comment "A simplified version of a time context associated to a point in time. " ;
+  rdfs:label "time point" ;
+  rdfs:subClassOf :TimeContext ;
+.
+:TimeRange
+  a owl:Class ;
+  rdfs:comment "A simplified version of a time context with a beginning and an end. " ;
+  rdfs:label "time range" ;
+  rdfs:subClassOf :TimeContext ;
+.
+:TransportationInfrastructure
+  a :DomainEntity ;
+  :WDID "Q376799" ;
+  :subConceptOf :GeographicLocation ;
+  rdfs:comment "fixed installations that allow vehicles to operate" ;
+  rdfs:label "transport infrastructure" ;
+.
+:Value
+  a :DomainEntity ;
+  :WDID "Q2912517" ;
+  :WDLink "https://www.wikidata.org/wiki/Q2912517" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "notion in mathematics" ;
+  rdfs:label "value" ;
+.
+:Variable
+  a owl:Class ;
+  rdfs:comment "A variable is a place holder in statements where we don't know the exact entities that will fill the statement. " ;
+  rdfs:label "variable" ;
+  rdfs:subClassOf :StatementConcept ;
+.
+:WDID
+  a owl:AnnotationProperty ;
+  rdfs:comment "Wikidata ID" ;
+  rdfs:label "wikidata ID" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :identifier ;
+  rdfs:subPropertyOf :provenance ;
+.
+:WDLink
+  a owl:AnnotationProperty ;
+  rdfs:comment "Link (URI) to a wikidata page" ;
+  rdfs:label "wikidata link"@en ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :IRI ;
+  rdfs:subPropertyOf :provenance ;
+.
+:Work
+  a :DomainEntity ;
+  :WDID "Q386724" ;
+  :alias "creation" ;
+  :alias "work's production" ;
+  :subConceptOf :DomainEntity ;
+  rdfs:comment "physical or virtual object made by humans" ;
+  rdfs:label "work" ;
+.
+:WorkProduct
+  a :DomainEntity ;
+  :WDID "Q15401930" ;
+  :subConceptOf :Product ;
+  :subConceptOf :Work ;
+  rdfs:comment "Result of some kind of effort. Mostly documents or research. " ;
+  rdfs:label "work product" ;
+.
+:access
+  a owl:AnnotationProperty ;
+  rdfs:comment "Optional attribute to determine the access of an entity or a property. Either public or private. The default is public. The private marker can be combined with the provenance tagging. " ;
+  rdfs:domain :Base ;
+  rdfs:label "access" ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "public"
+          "private"
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:addressesIssue
+  a owl:ObjectProperty ;
+  rdfs:comment "A process addresses a given issue type. This relation is not needed if there's a way to establish relevancy implicitly (e.g., by search)" ;
+  rdfs:domain :ProcessTemplate ;
+  rdfs:label "addresses issue" ;
+  rdfs:subPropertyOf :documentObjProp ;
+.
+:alias
+  a owl:AnnotationProperty ;
+  :alias "political division" ;
+  :alias "political territorial entity" ;
+  :alias "polity" ;
+  rdfs:comment "An alias or synonym" ;
+  rdfs:label "alias"@en ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:aspect_utterance
+  a owl:DatatypeProperty ;
+  rdfs:comment "aspect" ;
+  rdfs:domain :Parameter ;
+  rdfs:label "aspect" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:associatedToResource
+  a owl:ObjectProperty ;
+  rdfs:comment "One resource can be associated to another resource. This is a documentation property and the semantics are up to the user" ;
+  rdfs:label "associated to resource" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:attributeOf
+  a owl:ObjectProperty ;
+  rdfs:comment "Generic property for an attribute, like Person hasAttribute Address. " ;
+  rdfs:domain :DomainEntity ;
+  rdfs:label "attribute of " ;
+  rdfs:range :DomainEntity ;
+  rdfs:subPropertyOf :domainEntityObjProp ;
+  owl:inverseOf :hasAttribute ;
+.
+:boundBy
+  a owl:TransitiveProperty ;
+  rdfs:comment "A variable is bound by either another variable or one or more entities in the domain. These entities may be more or less specific. " ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          :Variable
+          :Context
+        ) ;
+    ] ;
+  rdfs:label "bound by" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :Variable
+          :DomainEntity
+          :Schema
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :hasParameterConstraint ;
+.
+:componentContextOf
+  a owl:ObjectProperty ;
+  rdfs:comment "A context may have one or several contexts associated to it. " ;
+  rdfs:domain :Context ;
+  rdfs:label "component context of" ;
+  rdfs:subPropertyOf :contextProperty ;
+  owl:inverseOf :hasComponentContext ;
+.
+:componentSchemaOf
+  a owl:ObjectProperty ;
+  :alias "componentFrameOf" ;
+  rdfs:comment "A schema may have subschemas" ;
+  rdfs:domain :Schema ;
+  rdfs:label "component schema of" ;
+  rdfs:range :Schema ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+  owl:inverseOf :hasComponentSchema ;
+.
+:confidence
+  a owl:AnnotationProperty ;
+  rdfs:comment "The confidence of a part of a model + instances" ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :StatementConcept
+        ) ;
+    ] ;
+  rdfs:label "confidence" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:contactPerson
+  a owl:AnnotationProperty ;
+  rdfs:comment "The person to contact regarding a given concept, mapping or subontology. Use sparingly at Upper Ontology levels. " ;
+  rdfs:label "contact person" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:containsText
+  a owl:ObjectProperty ;
+  rdfs:comment "A document object is associated to a subject" ;
+  rdfs:domain :DocumentConcept ;
+  rdfs:label "contains text" ;
+  rdfs:range :Text ;
+  rdfs:subPropertyOf :documentObjProp ;
+.
+:contextDataProperty
+  a owl:DatatypeProperty ;
+  rdfs:comment "data property associated to contexts" ;
+  rdfs:label "context data property" ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:contextOf
+  a owl:ObjectProperty ;
+  rdfs:comment "A statement can have another statement as a context (a precondition, a postcondition)" ;
+  rdfs:domain :Context ;
+  rdfs:label "contextOf" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :Statement
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+  owl:inverseOf :hasContext ;
+.
+:contextProperty
+  a owl:ObjectProperty ;
+  rdfs:comment "Property associated to contexts (temporal, geospatial), including contexts associated to other contexts or to entities and statements, containing other contexts, " ;
+  rdfs:label "context property" ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+.
+:contextText
+  a owl:DatatypeProperty ;
+  rdfs:comment "Placeholder for context information  " ;
+  rdfs:domain :Context ;
+  rdfs:label "context text" ;
+  rdfs:subPropertyOf :contextDataProperty ;
+.
+:dataValueObject
+  a owl:DatatypeProperty ;
+  rdfs:comment "The data value associated to a statement. " ;
+  rdfs:domain :Statement ;
+  rdfs:label "data value object" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:dateInfo
+  a owl:DatatypeProperty ;
+  rdfs:comment "Placeholder for context information  " ;
+  rdfs:domain :Context ;
+  rdfs:label "date info" ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf :contextDataProperty ;
+.
+:dbpediaLink
+  a owl:AnnotationProperty ;
+  rdfs:comment "link to DBPedia" ;
+  rdfs:label "dbpedia link" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :IRI ;
+  rdfs:subPropertyOf :provenance ;
+.
+:definition
+  a owl:DatatypeProperty ;
+  rdfs:comment "The definition associated to any entity. " ;
+  rdfs:label "definition" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :textInfo ;
+.
+:description
+  a owl:DatatypeProperty ;
+  rdfs:comment "The description associated to any entity" ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :textInfo ;
+.
+:documentDataProp
+  a owl:DatatypeProperty ;
+  rdfs:comment "data property associated to documents" ;
+  rdfs:label "document data property" ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:documentObjProp
+  a owl:ObjectProperty ;
+  rdfs:comment "Property specifically associated to a document or document section. " ;
+  rdfs:label "document object property" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:documentTitle
+  a owl:DatatypeProperty ;
+  rdfs:comment "the title associated to a document" ;
+  rdfs:domain :DocumentConcept ;
+  rdfs:label "document title" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :documentDataProp ;
+.
+:domainEntityObjProp
+  a owl:ObjectProperty ;
+  rdfs:comment "Properties among entities in the domain as opposed to properties among statements or properties from statements to domain entities. " ;
+  rdfs:domain :DomainEntity ;
+  rdfs:label "domain entity object property" ;
+  rdfs:range :DomainEntity ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:entityDataProperty
+  a owl:DatatypeProperty ;
+  rdfs:comment "A data property that applies to entities in the domain as opposed to metaDataProperty" ;
+  rdfs:label "entity data property" ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:equivalentTo
+  a owl:ReflexiveProperty ;
+  a owl:SymmetricProperty ;
+  a owl:TransitiveProperty ;
+  :alias "same as" ;
+  :alias "the same as" ;
+  rdfs:comment "Similar to owl:equivalentClass but for all types of (non property) entities. Not to be confused with aliases, which indicate equivalent (linguistic) terms" ;
+  rdfs:label "equivalent to"@en ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:followsDocumentObject
+  a owl:ObjectProperty ;
+  rdfs:comment "Describes the order of two document objects. " ;
+  rdfs:domain :DocumentConcept ;
+  rdfs:label "follows document object" ;
+  rdfs:range :DocumentConcept ;
+  rdfs:subPropertyOf :documentObjProp ;
+.
+:hasAttribute
+  a owl:ObjectProperty ;
+  rdfs:comment "Generic property for an attribute, like Person hasAttribute Address. " ;
+  rdfs:domain :DomainEntity ;
+  rdfs:label "has attribute" ;
+  rdfs:range :DomainEntity ;
+  rdfs:subPropertyOf :domainEntityObjProp ;
+  owl:inverseOf :attributeOf ;
+.
+:hasComponentContext
+  a owl:ObjectProperty ;
+  rdfs:comment "A context may have one or several contexts associated to it. " ;
+  rdfs:label "has component context" ;
+  rdfs:range :Context ;
+  rdfs:subPropertyOf :contextProperty ;
+  owl:inverseOf :componentContextOf ;
+.
+:hasComponentSchema
+  a owl:ObjectProperty ;
+  :alias "hasComponentFrame" ;
+  rdfs:comment "A schema may have component schemas" ;
+  rdfs:domain :Schema ;
+  rdfs:label "has component schema" ;
+  rdfs:range :Schema ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+  owl:inverseOf :componentSchemaOf ;
+.
+:hasComponentStatement
+  a owl:ObjectProperty ;
+  rdfs:comment "A statement may have one or more component statements. " ;
+  rdfs:domain :Statement ;
+  rdfs:label "has component statement" ;
+  rdfs:range :Statement ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+.
+:hasContext
+  a owl:ObjectProperty ;
+  rdfs:comment "A statement can have another statement as a context (a precondition, a postcondition)" ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :Statement
+        ) ;
+    ] ;
+  rdfs:label "has context" ;
+  rdfs:range :Context ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+  owl:inverseOf :contextOf ;
+.
+:hasDetectedOperationalState
+  a owl:ObjectProperty ;
+  rdfs:comment "a product has an actual operational state. " ;
+  rdfs:label "has detected operational state" ;
+  rdfs:subPropertyOf :hasAttribute ;
+  owl:inverseOf :partOf ;
+.
+:hasFirstComponentStatement
+  a owl:ObjectProperty ;
+  rdfs:comment "Component statements may need to be ordered, like in the case of an implication.  " ;
+  rdfs:domain :Statement ;
+  rdfs:label "has first component statement" ;
+  rdfs:range :Statement ;
+  rdfs:subPropertyOf :hasComponentStatement ;
+.
+:hasFirstSchemaStep
+  a owl:ObjectProperty ;
+  rdfs:comment "A schema or frame has a schema step as first step" ;
+  rdfs:domain :Schema ;
+  rdfs:label "has first schema step" ;
+  rdfs:range :SchemaStep ;
+  rdfs:subPropertyOf :hasFirstStep ;
+  rdfs:subPropertyOf :hasSchemaStep ;
+.
+:hasFirstStatement
+  a owl:ObjectProperty ;
+  rdfs:comment "A process step or a document or a document component has a first statement. " ;
+  rdfs:domain :DocumentReference ;
+  rdfs:label "has first statement" ;
+  rdfs:range :Statement ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+.
+:hasFirstStep
+  a owl:ObjectProperty ;
+  rdfs:comment "A schema or frame has a sub-schema or sub-frame as first step" ;
+  rdfs:label "has first step" ;
+  rdfs:subPropertyOf :hasStep ;
+.
+:hasNextComponentStatement
+  a owl:ObjectProperty ;
+  rdfs:comment "Component statements may need to be ordered, like in the case of an implication.  " ;
+  rdfs:domain :Statement ;
+  rdfs:label "has next component statement" ;
+  rdfs:range :Statement ;
+  rdfs:subPropertyOf :hasComponentStatement ;
+.
+:hasNextSchemaStep
+  a owl:ObjectProperty ;
+  rdfs:comment "A schema step has a next schema step" ;
+  rdfs:domain :SchemaStep ;
+  rdfs:label "has first schema step" ;
+  rdfs:range :SchemaStep ;
+  rdfs:subPropertyOf :hasNextStep ;
+  rdfs:subPropertyOf :hasSchemaStep ;
+.
+:hasNextStatement
+  a owl:ObjectProperty ;
+  rdfs:comment "A property that organizes statements in a flow. Look for its subproperties for processes and documents. " ;
+  rdfs:domain :Statement ;
+  rdfs:label "has next statement" ;
+  rdfs:range :Statement ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+  owl:inverseOf :hasPreviousStatement ;
+.
+:hasNextStep
+  a owl:ObjectProperty ;
+  rdfs:comment "Between process steps" ;
+  rdfs:label "has next step" ;
+  rdfs:subPropertyOf :hasStep ;
+.
+:hasObject
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a statement and its object item" ;
+  rdfs:domain :Statement ;
+  rdfs:label "has object" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :StatementConcept
+          rdfs:Literal
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :hasParameter ;
+.
+:hasParameter
+  a owl:ObjectProperty ;
+  rdfs:comment "Statements have parameters (variables, arguments, slots roles). In general, parameters point to a single statement (hasSubject, hasRelation, hasObject), an entity or they can point to variables (as in slots and roles).  " ;
+  rdfs:domain :Statement ;
+  rdfs:label "has parameter" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :Statement
+          :Variable
+          rdfs:Literal
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+.
+:hasParameterConstraint
+  a owl:ObjectProperty ;
+  :alias "has argument constraint" ;
+  :alias "has role constraint" ;
+  :alias "has slot constraint" ;
+  rdfs:comment "A constraint associated to the parameter (variable, slot) of a statement or schema. Only glo:DomainEntity's are used now as constraints. " ;
+  rdfs:domain :Variable ;
+  rdfs:label "has parameter constraint" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :Statement
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+  owl:equivalentProperty :hasSlotConstraint ;
+.
+:hasPart
+  a owl:ObjectProperty ;
+  :WDID "P527" ;
+  :WDLink "https://www.wikidata.org/wiki/Property:P527" ;
+  rdfs:comment "Property for meronimy. It can be used by itself or refined by other properties" ;
+  rdfs:domain :DomainEntity ;
+  rdfs:label "has part" ;
+  rdfs:range :DomainEntity ;
+  rdfs:subPropertyOf :domainEntityObjProp ;
+  owl:inverseOf :partOf ;
+.
+:hasPossibleOperationalState
+  a owl:ObjectProperty ;
+  rdfs:comment "a product has a possible operational state. " ;
+  rdfs:label "has possible operational state" ;
+  rdfs:subPropertyOf :hasAttribute ;
+  owl:inverseOf :partOf ;
+.
+:hasPreviousStatement
+  a owl:ObjectProperty ;
+  rdfs:comment "A property that organizes statements in a flow. " ;
+  rdfs:domain :Statement ;
+  rdfs:label "has previous statement" ;
+  rdfs:range :Statement ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+  owl:inverseOf :hasNextStatement ;
+.
+:hasProductCategory
+  a owl:ObjectProperty ;
+  :knownOPDomain :Product ;
+  :knownOPRange :Series ;
+  rdfs:comment "a product has a category" ;
+  rdfs:domain :DomainEntity ;
+  rdfs:label "has product category" ;
+  rdfs:range :DomainEntity ;
+  rdfs:subPropertyOf :hasAttribute ;
+  owl:inverseOf :partOf ;
+.
+:hasRelation
+  a owl:ObjectProperty ;
+  :alias "has predicate" ;
+  rdfs:comment "Relation between a statement and the relation it refers to" ;
+  rdfs:domain :Statement ;
+  rdfs:label "has relation" ;
+  rdfs:range owl:ObjectProperty ;
+  rdfs:subPropertyOf :hasParameter ;
+.
+:hasRole
+  a owl:ObjectProperty ;
+  :alias "has slot" ;
+  rdfs:comment "A schema or logic statement has roles (slots) or arguments. Roles (slots) can be variables. " ;
+  rdfs:domain :Schema ;
+  rdfs:label "has role" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :Variable
+          :Statement
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+  owl:equivalentProperty :hasSlot ;
+.
+:hasSchemaStep
+  a owl:ObjectProperty ;
+  rdfs:comment "A schema may have one or more steps which may be subschemas. If order is known, use hasNextStep. " ;
+  rdfs:domain :Schema ;
+  rdfs:label "has step" ;
+  rdfs:range :SchemaStep ;
+  rdfs:subPropertyOf :hasStep ;
+.
+:hasSlot
+  a owl:ObjectProperty ;
+  :alias "has role" ;
+  rdfs:comment "A schema or logic statement has slots (roles) or arguments. Slots (roles) can be variables. " ;
+  rdfs:domain :Schema ;
+  rdfs:label "has slot" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :Variable
+          :Statement
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+  owl:equivalentProperty :hasRole ;
+.
+:hasSlotConstraint
+  a owl:ObjectProperty ;
+  :alias "has argument constraint" ;
+  :alias "has role constraint" ;
+  :alias "has slot constraint" ;
+  rdfs:comment "A constraint associated to the parameter (variable, slot) of a statement or schema. Only glo:DomainEntity's are used now as constraints. " ;
+  rdfs:domain :Variable ;
+  rdfs:label "has slot constraint" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :Statement
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+  owl:equivalentProperty :hasParameterConstraint ;
+.
+:hasSlotType
+  a owl:ObjectProperty ;
+  :alias "has argument type" ;
+  :alias "has role function" ;
+  :alias "has role type" ;
+  :alias "has slot function" ;
+  :alias "has slot type" ;
+  rdfs:comment "An event or schema may have several associated role types, which describe the semantics of the argument/slot/type. E.g., agent, recipient, means, etc. " ;
+  rdfs:domain :Statement ;
+  rdfs:label "has slot role" ;
+  rdfs:range :SlotType ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+.
+:hasStep
+  a owl:ObjectProperty ;
+  rdfs:comment "A schema may have one or more steps which may be subschemas. If order is known, use hasNextStep. " ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          :Schema
+          :ProcessTemplate
+        ) ;
+    ] ;
+  rdfs:label "has step" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :SchemaStep
+          :ProcessStep
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+.
+:hasSubProcess
+  a owl:ObjectProperty ;
+  rdfs:comment "A process may invoke a separate process to obtain a result" ;
+  rdfs:domain :ProcessTemplate ;
+  rdfs:label "has subprocess" ;
+  rdfs:range :ProcessTemplate ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+.
+:hasSubject
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a statement and its subject item, which can be a Domain Entity or a statement" ;
+  rdfs:domain :Statement ;
+  rdfs:label "has subject" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :StatementConcept
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :hasParameter ;
+.
+:identifiedTerm
+  a owl:DatatypeProperty ;
+  rdfs:comment "A term associated to a term that has not been identified. " ;
+  rdfs:domain :Parameter ;
+  rdfs:label "identified term" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:identifier
+  a owl:AnnotationProperty ;
+  :alias "id" ;
+  rdfs:comment "a field that identifies the object that is associated to. For IRIs, use the annotation property referenceIRI." ;
+  rdfs:label "identifier" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:instanceOfSchema
+  a owl:ObjectProperty ;
+  rdfs:comment "A frame is an instantiation of a schema" ;
+  rdfs:label "instanceOfSchema" ;
+  rdfs:range :Schema ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+  owl:inverseOf :schemaHasInstance ;
+.
+:knownDataForConcept
+  a owl:AnnotationProperty ;
+  rdfs:comment "A way to document the domain of a data property. The data property belongs to a concept and its subconcepts. " ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:label "known data for concept" ;
+  rdfs:range :Base ;
+  rdfs:subPropertyOf :metaAnnotation ;
+.
+:knownDataForInstance
+  a owl:AnnotationProperty ;
+  rdfs:comment "A way to document the domain of a data property. The data property belongs to the instances of a concept (and its subconcepts). " ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:label "known data for instance" ;
+  rdfs:range :Base ;
+  rdfs:subPropertyOf :metaAnnotation ;
+.
+:knownOPDomain
+  a owl:AnnotationProperty ;
+  rdfs:comment "A way to document the domain of an object property (relation) . The enforcement is up to the user application" ;
+  rdfs:domain owl:ObjectProperty ;
+  rdfs:label "known OP domain" ;
+  rdfs:range :Base ;
+  rdfs:subPropertyOf :metaAnnotation ;
+.
+:knownOPRange
+  a owl:AnnotationProperty ;
+  rdfs:comment "A way to document the domain of an object property (relation) . The enforcement is up to the user application" ;
+  rdfs:domain owl:ObjectProperty ;
+  rdfs:label "known OP range" ;
+  rdfs:range :Base ;
+  rdfs:subPropertyOf :metaAnnotation ;
+.
+:metaAnnotation
+  a owl:AnnotationProperty ;
+  rdfs:comment "Annotations that describe domains and ranges of domain entity properties have. " ;
+  rdfs:label "meta annotation" ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:metaDataProperty
+  a owl:DatatypeProperty ;
+  rdfs:comment "A data property that applies to all kinds of objects in the metamodel" ;
+  rdfs:label "meta data property" ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:modality
+  a owl:AnnotationProperty ;
+  rdfs:comment "Whether something is actual or possible. E.g., a computer battery HAS THE POSSIBILITY OF being depleted, versus my computer battery IS depleted. " ;
+  rdfs:label "modality" ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "Detected"
+          "Possible"
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:partOf
+  a owl:ObjectProperty ;
+  :WDID "P361" ;
+  :WDLink "https://www.wikidata.org/wiki/Property:P361" ;
+  :alias "assembly of" ;
+  :alias "band member of" ;
+  :alias "branch of" ;
+  :alias "cadet branch of" ;
+  :alias "collateral branch of" ;
+  :alias "component of" ;
+  :alias "contained within" ;
+  :alias "in" ;
+  :alias "is part of" ;
+  :alias "merged into" ;
+  :alias "merged with" ;
+  :alias "meronym of" ;
+  :alias "part of-property" ;
+  :alias "section of" ;
+  :alias "subassembly of" ;
+  :alias "subgroup of" ;
+  :alias "subsystem of" ;
+  :alias "system of" ;
+  :alias "within" ;
+  rdfs:comment "object of which the subject is a part (if this subject is already part of object A which is a part of object B, then please only make the subject part of object A). Inverse property of \"has part\" (P527, see also \"has parts of the class\" (P2670))." ;
+  rdfs:domain :DomainEntity ;
+  rdfs:label "part of" ;
+  rdfs:range :DomainEntity ;
+  rdfs:seeAlso :hasPart ;
+  rdfs:subPropertyOf :domainEntityObjProp ;
+  owl:inverseOf :hasPart ;
+.
+:person_utterance
+  a owl:DatatypeProperty ;
+  rdfs:comment "the person associated to the utterance" ;
+  rdfs:domain :Parameter ;
+  rdfs:label "person utterance" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:probabilityNum
+  a owl:AnnotationProperty ;
+  rdfs:comment "a numeric probability. " ;
+  rdfs:label "numeric probability" ;
+  rdfs:range xsd:float ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:processData
+  a owl:DatatypeProperty ;
+  rdfs:comment "data associated to process objects" ;
+  rdfs:label "process data" ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:provenance
+  a owl:AnnotationProperty ;
+  rdfs:comment "the provenance for a given statement or class. Provenance can be added to any entity or meta-entity" ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :StatementConcept
+        ) ;
+    ] ;
+  rdfs:label "provenance" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:provenanceKB
+  a owl:AnnotationProperty ;
+  rdfs:comment "A single provenance marker for provenance knowledge bases without ids. The marker should be consistently used for all entities from a single KB. " ;
+  rdfs:label "provenance KB" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :provenance ;
+.
+:proxyOf
+  a owl:ObjectProperty ;
+  :alias "list proxy of" ;
+  rdfs:comment "A schema step or a process step represents another statement in a list" ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          :SchemaStep
+          :ProcessStep
+        ) ;
+    ] ;
+  rdfs:label "proxy of" ;
+  rdfs:range :Statement ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+.
+:roleCardinality
+  a owl:DatatypeProperty ;
+  rdfs:comment "Role cardinality can be a numeral, '+' or '*'. Must be interpreted by the underlying application. " ;
+  rdfs:domain :Parameter ;
+  rdfs:label "role cardinality" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:roleChoice
+  a owl:DatatypeProperty ;
+  rdfs:comment "Whether the role is mandatory or optional. The default is mandatory. " ;
+  rdfs:domain :Parameter ;
+  rdfs:label "role choice" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:roleName
+  a owl:DatatypeProperty ;
+  rdfs:comment "The name of a role variable as it pertains to a particular schema" ;
+  rdfs:domain :Parameter ;
+  rdfs:label "role name" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :varName ;
+.
+:sameReferentAs
+  a owl:ReflexiveProperty ;
+  a owl:SymmetricProperty ;
+  a owl:TransitiveProperty ;
+  rdfs:comment "Two instances refer to the same item in the domain of discourse" ;
+  rdfs:domain :DomainEntity ;
+  rdfs:label "same referent as" ;
+  rdfs:range :DomainEntity ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+  owl:inverseOf :sameReferentAs ;
+.
+:schemaHasInstance
+  a owl:ObjectProperty ;
+  rdfs:comment "A frame is an instantiation of a schema" ;
+  rdfs:domain :Schema ;
+  rdfs:label "schema has instance" ;
+  rdfs:subPropertyOf :statementConceptObjProp ;
+  owl:inverseOf :instanceOfSchema ;
+.
+:stagingStatus
+  a owl:AnnotationProperty ;
+  rdfs:comment "What state the entity (instance or property) . The default is verified. " ;
+  rdfs:label "staging status" ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "non verified"
+          "verified"
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:statementConceptObjProp
+  a owl:ObjectProperty ;
+  rdfs:comment "Property between statements (e.g., schemas, logical statements, etc. )" ;
+  rdfs:label "statement concept object property" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:statementDataProp
+  a owl:DatatypeProperty ;
+  rdfs:comment "data associated to statements" ;
+  rdfs:label "statement data property" ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:stepRefersToEvent
+  a owl:ObjectProperty ;
+  rdfs:comment "A schema step may refer to a sub-schema or a simple event (OccurrenceEntity)" ;
+  rdfs:domain :SchemaStep ;
+  rdfs:label "step refers to event" ;
+  rdfs:range :OccurrenceEntity ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+.
+:stmtText
+  a owl:DatatypeProperty ;
+  rdfs:comment "The text associated to a statement. " ;
+  rdfs:domain :Statement ;
+  rdfs:label "stmt text" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:subCategoryOf
+  a owl:ObjectProperty ;
+  rdfs:comment "Relations associated to categories (especially in Wikidata)" ;
+  rdfs:label "subcategory of" ;
+  rdfs:subPropertyOf :domainEntityObjProp ;
+.
+:subConceptOf
+  a owl:TransitiveProperty ;
+  rdfs:comment "A is a subconcept of B if all instances in A are also in B or, in other words, B is a hypernim of A. It should NOT be used with instances, even though this constraint is not enforced by the ontology" ;
+  rdfs:label "subconcept of"@en ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:template
+  a owl:DatatypeProperty ;
+  rdfs:comment "The template associated to a statement " ;
+  rdfs:domain :Statement ;
+  rdfs:label "template" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:temporalPrecedes
+  a owl:TransitiveProperty ;
+  rdfs:comment "a domain entity A temporalPrecedes B if the presence of B in the text suggests that A has happened. " ;
+  rdfs:domain :DomainEntity ;
+  rdfs:label "temporal precedes" ;
+  rdfs:range :DomainEntity ;
+  rdfs:subPropertyOf :domainEntityObjProp ;
+.
+:textAssociatedTo
+  a owl:ObjectProperty ;
+  rdfs:comment "A document object is associated to a subject" ;
+  rdfs:domain :DocumentConcept ;
+  rdfs:label "text associated to" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :StatementConcept
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :documentObjProp ;
+.
+:textContent
+  a owl:DatatypeProperty ;
+  rdfs:comment "the text associated to a document" ;
+  rdfs:domain :DocumentConcept ;
+  rdfs:label "text content" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :documentDataProp ;
+.
+:textInfo
+  a owl:DatatypeProperty ;
+  rdfs:comment "Text info in the domain for an instance as opposed to rdfs:comment, which is a metadata property, applicable to all elements (classes, instances, etc.)." ;
+  rdfs:label "text info" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :entityDataProperty ;
+.
+:title
+  a owl:DatatypeProperty ;
+  rdfs:comment "The title of a document or a document section " ;
+  rdfs:domain :DocumentConcept ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :documentDataProp ;
+.
+:toReferentObjProp
+  a owl:ObjectProperty ;
+  rdfs:comment "Property between a statement concept (e.g., variable,  schema, logical statement) and its referent (a domain entity or maybe another statement concept)" ;
+  rdfs:label "to referent object property" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:topAnnotationProperty
+  a owl:AnnotationProperty ;
+  rdfs:comment "Annotations can be used everywhere, in classes, relation definitions or instances" ;
+  rdfs:domain :Base ;
+  rdfs:label "top annotation property" ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "public"
+          "private"
+        ) ;
+    ] ;
+  rdfs:subPropertyOf owl:topAnnotationProperty ;
+.
+:topDataProperty
+  a owl:DatatypeProperty ;
+  rdfs:comment "The top data property for this ontology. " ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "top data property" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:topObjectProperty
+  a owl:ObjectProperty ;
+  rdfs:comment "the top object property. " ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "top object property" ;
+  rdfs:range owl:Thing ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:varName
+  a owl:DatatypeProperty ;
+  rdfs:comment "The name of a variable as it's referenced in a particular schema" ;
+  rdfs:domain :Parameter ;
+  rdfs:label "variable name" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:verbe_form
+  a owl:DatatypeProperty ;
+  rdfs:comment "form of a verb (e.g., gerund)" ;
+  rdfs:domain :Parameter ;
+  rdfs:label "verbe form" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:verbe_tense
+  a owl:DatatypeProperty ;
+  rdfs:comment "tense of a verb" ;
+  rdfs:domain :Parameter ;
+  rdfs:label "verb tense" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:voice_of_utterance
+  a owl:DatatypeProperty ;
+  rdfs:comment "voice" ;
+  rdfs:domain :Parameter ;
+  rdfs:label "voice of utterance" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+owl:topAnnotationProperty
+  a owl:AnnotationProperty ;
+  rdfs:comment "The annotation property that provides metadata to classes and properties." ;
+  rdfs:label "top annotation property" ;
+.
