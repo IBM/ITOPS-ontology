@@ -6,7 +6,7 @@ Special thanks to Salim Roukos, Ruchi Mahindru and Yu Deng for their help and ad
 The IT Operations ontology is built from a domain agnostic pipeline that leverages information from Wikidata, Wikipedia and DBPedia. There are three stages in the current pipeline, each extending the previous ones by using a variety of symbolic and ML/DL techniques. 
 
 The outcome of each stage is a turtle (.ttl) file, ITOPS_S1.ttl, ITOPS_S2.ttl and ITOPS_S3.ttl which can be deployed separately and installed in a triplestore. All of them build upon a General Library of Objects (GLO), which
-provides a general ontological framework to the domain specific graphs. These files are published under Apache 2.0 license. 
+provides a general ontological framework to the domain specific graphs. For the users' convenience, we also include GLO separately. Each file is self-contained and can be used without the others. All of the files are published under Apache 2.0 license. 
 
 Please check the ITOPS_README.pdf file for further details and sample queries. 
 
