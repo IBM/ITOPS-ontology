@@ -1874,7 +1874,7 @@
 .
 :subConceptOf
   a owl:TransitiveProperty ;
-  rdfs:comment "A is a subconcept of B if all instances in A are also in B or, in other words, B is a hypernim of A. It should NOT be used with instances, even though this constraint is not enforced by the ontology" ;
+  rdfs:comment "A is a subconcept of B if all instances in A are also in B or, in other words, B is a hypernim of A." ;
   rdfs:label "subconcept of"@en ;
   rdfs:subPropertyOf :topObjectProperty ;
 .
