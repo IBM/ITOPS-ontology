@@ -1,4 +1,4 @@
-# An Ontology for IT Operations, ITOPS
+# An Ontology for IT Operations, ITOPS -- github.com/IBM/ITOPS-ontology
 Authors: Rosario Uceda-Sosa, Nandana Mihindukulasooriya, Sahil Bansal, Seema Nagar, Atul Kumar, Vikas Agarwal, Gaetano Rossiello, Alfio Gliozzo 
 
 Special thanks to Salim Roukos, Ruchi Mahindru and Yu Deng for their help and advice. 
