@@ -31,7 +31,7 @@ In order to enable a domain-agnostic pipeline, we have created a small, general 
 
 For our S3, we've used the following glossaries as input: 
 
-DB2 https://www.ibm.com/support/knowledgecenter/SSEPGG\_11.1.0/\\com.ibm.db2.luw.glossary.doc/doc/glossary.html
+DB2 https://www.ibm.com/support/producthub/db2/docs/content/SSEPGG_11.5.0/com.ibm.db2.luw.glossary.doc/doc/glossary.html
 
 Cloud Object Storage https://www.ibm.com/support/knowledgecenter/STXNRM\_3.14.7/coss.doc/\\help\_glossary.html
 
