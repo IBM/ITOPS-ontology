@@ -26,6 +26,17 @@ In order to enable a domain-agnostic pipeline, we have created a small, general 
 ![](images/GL0_UpperOntology.jpg)
 <p align="center"> Fig. 2. The GLO Upper Ontology </p>
 
+
+## Input Glossaries
+
+For our S3, we've used the following glossaries as input: 
+
+DB2 https://www.ibm.com/support/knowledgecenter/SSEPGG\_11.1.0/\\com.ibm.db2.luw.glossary.doc/doc/glossary.html
+
+Cloud Object Storage https://www.ibm.com/support/knowledgecenter/STXNRM\_3.14.7/coss.doc/\\help\_glossary.html
+
+Lenovo https://flexsystem.lenovofiles.com/help/index.jsp?\\topic=\textbackslashcom.lenovo.acc.common.nav.doc\textbackslashglossary.html
+
 ## How to query the ITOPS ontology
 
 In this section, we illustrate few example queries to extract information from the IT Operations ontology. 
